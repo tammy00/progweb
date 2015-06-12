@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Frase</title>
+    </head>
+    <body>
+	<table border = '0'>
+	<tr>
+	        <td>
+	            <img src="javascript_imagem.jpg" heigth="100" width="100">
+                </td>
+		<td>       	
+			<h3>うずまき ナルト</h3>
+		</td>
+	</tr>
+	</table>  
+	<p>"<i>わかったってばよ！</i>"</p><br>
+	<table border = 0>
+		<td> <div id='contador'>0 people like this</div> </td>
+     		<td> 
+	        	<form name='contador'>
+	            		<input type='button' name ='like' value ='like'>
+	        	</form>
+     		</td>
+	</table>
+	<div name='comentario' id = 'comentario'> </div></br>
+	<table>
+		<td>Comentários:
+			<tr> </tr>
+		</td>
+		<td>
+    			<textarea name='area' id='area'></textarea>
+		</td>
+		<td>
+			<form name='coment'>
+				<input type='button' name ='bcomentario' value ='Comentar'>
+        		</form>
+		</td> 
+	</table>
+	<script>
+		var CONT = 1;
+                document.contador.like.onclick = function like () {
+                        document.getElementById ("contador").innerHTML = CONT + " people like this";
+                        CONT = CONT +1;
+               }
+                
+                document.coment.bcomentario.onclick = function comentario () {
+                        document.getElementById ("comentario").innerHTML += document.getElementById("area").value;
+                        document.getElementById ("comentario").innerHTML += "</br>"
+                        document.getElementById ("comentario").style.background = "gray";
+                        document.getElementById ("comentario").style.padding = "10px";
+                }
+	</script>
+    </body>
+</html>
