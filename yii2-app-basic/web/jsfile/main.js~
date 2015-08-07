@@ -1,0 +1,9 @@
+function handleMouseOver (elemento)
+{
+     elemento.style.color='red';
+}
+
+function handleMouseOut (elemento)
+{
+     elemento.style.color='black';
+}
